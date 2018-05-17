@@ -8,21 +8,34 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="jqpagination.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Pangolin|Varela+Round" rel="stylesheet">
     
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous">
-    </script>
-    <script type="text/javascript" src="script.js"></script>
+   <script type="text/javascript" src="jquery.min.js"></script>
+   <script type="text/javascript" src="jquery.jqpagination.min.js"></script>
+   <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
+    <div class="container">
     <h1>Movie Picker</h1>
     <h2>Number of Movies : <span id="movie_count"></span></h2>
-    <h3>Choose A Genre</h3>
+    <h3>Choose One Or More Genres</h3>
     <div id="genre_canvas"></div>
     
     <div id="year_canvas"></div>
+    
+    <div id="lang_canvas"></div>
+    
+
+    <div class="row" id="results_canvas"></div>
+    
+    <div class="pagination_center display_none">
+      <div id="pagination">
+      </div>
+    </div>
+
+
     
 </body>
 </html>

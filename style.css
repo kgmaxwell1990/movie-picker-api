@@ -1,0 +1,48 @@
+.blue_bg {
+    background-color: blue;
+    border-color: blue;
+}
+
+.placeholder_img_div,
+.poster_img_div{
+    display: relative;
+    padding-bottom: 15px;
+}
+
+.poster_img,
+.placeholder_img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    width: 80%;
+}
+
+.display_none {
+    display: none;
+}
+
+.pagination_center {
+    text-align: center;
+}
+
+#pagination {
+    display: inline-block;
+}
+
+#pagination button {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+#pagination button.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+#pagination button:hover:not(.active) {background-color: #ddd;}
+
+
