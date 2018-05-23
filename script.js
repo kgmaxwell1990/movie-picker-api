@@ -9,7 +9,6 @@ function doRequestMain(funcToCall, genreArg="", yearStartArg=1, yearEndArg=2099,
             funcToCall(this.responseText, genreArg, yearStartArg, yearEndArg, pageNo)
         }
     }
-    // console.log(request)
 }
 
 function doRequestGenres(funcToCall) {
@@ -50,8 +49,6 @@ function genreSelect(apiData){
      let genreData = JSON.parse(apiData)
      let genreSelection = "";
      for (let i = 0; i <= genreData.genres.length -1; i++) {
-        // console.log(genreData.genres[i].id)
-        // console.log(genreData.genres[i].name)
         genreSelection += "<button id='genre" + genreData.genres[i].id + "'class='btn btn-success' onclick='genreAdapt(" + genreData.genres[i].id + ")'>" + genreData.genres[i].name + "</button>"
      }
      document.getElementById('genre_canvas').innerHTML = genreSelection
@@ -61,7 +58,7 @@ let genreIds = [];
 function genreAdapt(genreId) {
     let fullGenreId = "#genre" + genreId;
     if(genreIds.includes(genreId)) {
-        $(fullGenreId).css("background-color", "#5cb85c")
+        $(fullGenreId).css("background-color", "purple")
         while (genreIds.indexOf(genreId) !== -1) {
           genreIds.splice(genreIds.indexOf(genreId), 1);
         }
@@ -69,7 +66,7 @@ function genreAdapt(genreId) {
         doRequestMain(yearSelect,genreIdsString);
         doRequestMain(showMovies,genreIdsString);
     }else {
-        $(fullGenreId).css("background-color", "blue")
+        $(fullGenreId).css("background-color", "black")
         genreIds.push(genreId);
         let genreIdsString = genreIds.join();
         doRequestMain(yearSelect,genreIdsString);
@@ -98,7 +95,7 @@ function yearSelect(data, genreIdsString) {
     yearCanvas.innerHTML += "<button class='btn btn-warning year_button' onclick='yearAdapt([" + genreIdsString + "]," + '"' +currentYear+'-'+currentMonth +'-'+currentDate + '"' + ",2099); makeActive()'> Unreleased </button>"
 }
 function makeActive() {
-    $(this).css("background-color", "blue")
+    $(this).css("background-color", "black")
 }
 function yearAdapt(genreIdsArray, yearLow, yearHigh) {
     let genres = genreIdsArray.join()
@@ -146,7 +143,7 @@ function showMovies(data, genre, yearStart, yearEnd, pageNo) {
 
 function changePage(currentPage, genre, yearStart, yearEnd){
     let currentPageId = "#pageNo" + currentPage
-    $(currentPageId).css("background-color", "blue")
+    $(currentPageId).css("background-color", "black")
     doRequestMain(showMovies, genre, yearStart, yearEnd, currentPage)
 }
 

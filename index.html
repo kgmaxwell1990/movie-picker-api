@@ -9,15 +9,23 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Pangolin|Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Roboto" rel="stylesheet">
     
    <script type="text/javascript" src="jquery.min.js"></script>
    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
+    <div class="container-fluid">
     <div class="container search">
-    <h1>Movie Picker</h1>
-    <h2>Number of Movies : <span id="movie_count"></span></h2>
+        <div class="header">
+            <div class="row">
+                <div class="col-xs-8 col-xs-offset-4">
+                    <h1 class="title">Movie Picker</h1>
+                    <h3>Movies to Choose From<br> <span id="movie_count"></span></h3>
+                </div>
+            </div>
+        </div>
+        <div class="container main_content">
     <h3>Choose One Or More Genres</h3>
     <div id="genre_canvas"></div>
     
@@ -33,6 +41,7 @@
       </div>
     </div>
     </div>
+    </div>
     
     <div class="container movie_detail">
         <div id="movie_canvas"></div>
@@ -40,6 +49,6 @@
     </div>
 
 
-    
+    </div>
 </body>
 </html>

@@ -1,6 +1,71 @@
-.blue_bg {
-    background-color: blue;
-    border-color: blue;
+/*font-family: 'Bangers', cursive;*/
+/*font-family: 'Roboto', sans-serif;*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /*background: linear-gradient(black, white);*/
+}
+
+.display_none {
+    display: none;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+h1 {
+    font-family: 'Bangers', cursive;
+}
+
+.search {
+    width:100vw;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.header {
+    background: url("movie_bg.jpg") center no-repeat;
+    background-size: cover;
+    height: 40vh;
+    text-align: right;
+    padding-right: 5%;
+    padding-top: 3%
+}
+
+.header h1 {
+    color: white;
+    font-size: 50px;
+}
+
+.header h3 {
+    padding-top: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.main_content {
+    text-align: center;
+}
+
+.btn-success {
+    background-color: purple;
+    border-color: purple;
+    margin: 5px;
+}
+
+.btn-success:hover {
+    background-color: black;
+    border-color: black;
+}
+
+.btn-warning {
+    background-color: orange;
+    border-color: orange;
+    margin: 5px;
 }
 
 .results{
@@ -20,13 +85,6 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
     width: 100%;
 }
-
-.display_none {
-    display: none;
-}
-
-
-
 
 #results_info {
   position: absolute;
@@ -84,3 +142,14 @@
 
 #pagination button:hover:not(.active) {background-color: #ddd;}
 
+
+@media only screen and (min-width: 768px) {
+    .header h1 {
+        font-size: 65px;
+    }
+
+    .header h3 {
+        padding-top: 5px;
+        font-size: 30px;
+    }
+}
