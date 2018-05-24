@@ -58,7 +58,7 @@ let genreIds = [];
 function genreAdapt(genreId) {
     let fullGenreId = "#genre" + genreId;
     if(genreIds.includes(genreId)) {
-        $(fullGenreId).css("background-color", "purple")
+        $(fullGenreId).css("background-color", "gray")
         while (genreIds.indexOf(genreId) !== -1) {
           genreIds.splice(genreIds.indexOf(genreId), 1);
         }
@@ -66,7 +66,7 @@ function genreAdapt(genreId) {
         doRequestMain(yearSelect,genreIdsString);
         doRequestMain(showMovies,genreIdsString);
     }else {
-        $(fullGenreId).css("background-color", "black")
+        $(fullGenreId).css("background-color", "#C83725")
         genreIds.push(genreId);
         let genreIdsString = genreIds.join();
         doRequestMain(yearSelect,genreIdsString);
@@ -153,10 +153,10 @@ function movieDetail(apiData) {
     $('.movie_detail').show()
     let data = JSON.parse(apiData)
     console.log(data)
-    let movie = "<a href='#' onclick='goBack()'>Go Back to Search</a>"
-    movie += "<h1>"+ data.title +"</h1>"
-    movie += "<img src='https://image.tmdb.org/t/p/w300_and_h450_bestv2" + data.poster_path + "' width='200'>"
-    movie += "<p>"+ data.overview +"</p>"
+    let movie = "<div class='header_specific'>"
+    movie += "<h1>"+ data.title +"</h1></div><div class='go_back_button'><a href='#' onclick='goBack()' class='back_button'><i class='fas fa-arrow-circle-left fa-3x'></i></a></div>"
+    movie += "<div class='row specific_content'><div class='col-sm-4 specific_img'><img src='https://image.tmdb.org/t/p/w300_and_h450_bestv2" + data.poster_path + "' width='200'></div>"
+    movie += "<div class='col-sm-8'><h2>" + data.tagline + "</h2><p>"+ data.overview +"</p><p><strong>Vote Average: </strong>" + data.vote_average + "</p><p><strong>Original Language: </strong>" + data.original_language + "</p><p><strong>Release Date: </strong>" + data.release_date + "</p></div></div>"
     
     document.getElementById("movie_canvas").innerHTML = movie
 }

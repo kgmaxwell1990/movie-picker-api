@@ -3,7 +3,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    /*background: linear-gradient(black, white);*/
+    height: 100%;
 }
 
 .display_none {
@@ -15,12 +15,14 @@ body {
     padding-right: 0;
 }
 
-h1 {
-    font-family: 'Bangers', cursive;
+h1{
+    font-family: 'Titan One', cursive;
 }
 
-.search {
+.search,
+.movie_detail{
     width:100vw;
+    height: 100vh;
     padding-right: 0;
     padding-left: 0;
     margin-right: 0;
@@ -28,43 +30,76 @@ h1 {
 }
 
 .header {
-    background: url("movie_bg.jpg") center no-repeat;
+    background: url("http://media.jinni.com/solutions/images/solutions_headerBg_with_banner.png") center no-repeat;
     background-size: cover;
-    height: 40vh;
-    text-align: right;
+    height: 70vh;
+    text-align: center;
     padding-right: 5%;
     padding-top: 3%
 }
 
-.header h1 {
-    color: white;
-    font-size: 50px;
+.header_specific {
+    background: url("specific_movie_bg.jpg") center no-repeat;
+    background-size: cover;
+    height: 70vh;
+    text-align: center;
+    padding-right: 5%;
+    padding-top: 3%
 }
 
-.header h3 {
-    padding-top: 20px;
+.header h1,
+.header_specific h1{
+    font-size: 50px;
+    font-weight: 100;
+    color: #C83725;
+    text-shadow: 1px 1px black;
+    vertical-align: middle;
+    line-height: 40vh; 
+}
+
+.specific_content {
+    margin: 20px;
+}
+
+.specific_content .col-sm-4 {
+    text-align: center;
+}
+
+.header h2 {
     color: white;
+    margin-top: -50px;
+}
+
+.header h4 {
+    padding-top: 50px;
     font-size: 20px;
+    color: white;
 }
 
 .main_content {
     text-align: center;
 }
 
+.genre_select h3 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+
+
 .btn-success {
-    background-color: purple;
-    border-color: purple;
+    background-color: gray;
+    border-color: gray;
     margin: 5px;
 }
 
 .btn-success:hover {
-    background-color: black;
-    border-color: black;
+    background-color: #C83725;
+    border-color: #C83725;
 }
 
 .btn-warning {
-    background-color: orange;
-    border-color: orange;
+    background-color: #C83725;
+    border-color: #C83725;
     margin: 5px;
 }
 
@@ -81,9 +116,18 @@ h1 {
 }
 
 .poster_img,
-.placeholder_img {
+.placeholder_img{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
     width: 100%;
+}
+
+.specific_img img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.fa-arrow-circle-left {
+    color: gray;
+    margin: 20px;
 }
 
 #results_info {
